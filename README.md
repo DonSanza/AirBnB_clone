@@ -94,4 +94,4 @@ $ python3 unittest -m tests/test_console.py
 ## Authors :black_nib:
 
 * **Sandile Mazibuko** 
-* **Bathobile Precious Pearl** 
+* **Bathobile Precious Pearl Nkosi** 
