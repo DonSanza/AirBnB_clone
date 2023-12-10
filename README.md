@@ -108,4 +108,3 @@ $ python3 unittest -m tests/test_console.py
 
 * **Sandile Mazibuko**
 * **Bathobile Precious Pearl Nkosi**
--- INSERT --                
