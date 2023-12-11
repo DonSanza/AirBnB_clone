@@ -1,4 +1,4 @@
-<p align="center">
+p align="center">
   <img src="https://github.com/Adeniyii/AirBnB_clone/blob/main/assets/hbnb_logo.png" alt="HolbertonBnB logo">
 </p>
 
@@ -35,6 +35,7 @@ Destroy an object | ```(hbnb) destroy <class> <id>``` or ```(hbnb) <class>.destr
 Show all objects, or all instances of a class | ```(hbnb) all``` or ```(hbnb) all <class>```
 Update an attribute of an object | ```(hbnb) update <class> <id> <attribute name> "<attribute value>"``` or ```(hbnb) <class>.update(<id>, <attribute name>, "<attribute value>")```
 
+
 ### Interactive mode (example)
 
 ```bash
@@ -70,6 +71,18 @@ $ cat test_help | ./console.py
 
 Documented commands (type help <topic>):
 ========================================
+
+EOF  help  quit
+(hbnb)
+$
+$ cat test_help
+help
+$
+$ cat test_help | ./console.py
+(hbnb)
+
+Documented commands (type help <topic>):
+========================================
 EOF  help  quit
 (hbnb)
 $
@@ -93,5 +106,5 @@ $ python3 unittest -m tests/test_console.py
 
 ## Authors :black_nib:
 
-* **Sandile Mazibuko** 
-* **Bathobile Precious Pearl** 
+* **Sandile Mazibuko**
+* **Bathobile Precious Pearl Nkosi**
