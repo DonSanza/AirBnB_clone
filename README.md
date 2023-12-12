@@ -1,110 +1,64 @@
-p align="center">
-  <img src="https://github.com/Adeniyii/AirBnB_clone/blob/main/assets/hbnb_logo.png" alt="HolbertonBnB logo">
-</p>
+Description of the project
 
+This is the first step towards building your first full web application: the AirBnB clone. The aim of the project is to deploy a replica of the Airbnb Website using my server. The final version of this project will have:
 
-<h1 align="center">HolbertonBnB</h1>
-<p align="center">An AirBnB clone.</p>
+A command interpreter to manipulate data without a visual interface, like a shell (for development and debugging)
+A website (front-end) with static and dynamic functionalities
+A comprehensive database to manage the backend functionalities
+An API that provides a communication interface between the front and backend of the system.
 
----
+Aims & Objectives of this project
+==================================
+This will help to be able to manage the objects of our project:
 
-## Description :label:
+Creation of a new object (ex: a new "User" or a new "Place")
+Retrieval of an object from a file storage, a database etc… 
+Perform operations on objects (count, compute stats, etc…)
+Update attributes of an object
+Destroy an object
+The created objects
+The list of the objects (instances) that can be created are as follows:
 
-HolbertonBnB is a complete web application, integrating database storage, a back-end API, and front-end interface in a clone of AirBnB.
+BaseModel
+User
+City
+Amenity
+State
+Review
+Place
+Files and Directories
+models directory contains all classes used for the entire project. A class, called “model” in a OOP project is the representation of an object/instance.
+tests directory contains all unit tests.
+console.py file is the entry point of our command interpreter.
+models/base_model.py file is the base class of all our models. It contains common elements:
+attributes: id, created_at and updated_at
+methods: save() and to_json()
+models/engine directory contains all storage classes (using the same prototype). For the moment I will have only one: file_storage.py.
+The project's implementation will happen in the following phases:
 
-This team project is part of the (Alx) Holberton School Software Engineering program. </br>
-It represents the first step towards building a full web application.
+Phase One
+=========
+The first phase is to manipulate a powerful storage system to give an abstraction between objects and how they are stored and persisted. To achieve this, I will:
 
-This first step consists of:
-- a custom command-line interface for data management,
-- and the base classes for the storage of this data.
+put in place a parent class (called BaseModel) to take care of the initialization, serialization and deserialization of my future instances
+create a simple flow of serialization/deserialization: Instance <-> Dictionary <-> JSON string <-> file
+create all classes used for AirBnB (User, State, City, Place…) that inherit from BaseModel
+create the first abstracted storage engine of the project: File storage.
+create all unittests to validate all our classes and storage engine
+Create a data model
+Manage (create, update, destroy, etc) objects via a console/command interpreter
+Store and persist objects to files (JSON files)
 
-## Usage 💻
+Compilation
+===========
+To start up the interpreter, clone this repository, and run the console file on linux as follows:
 
-The console works both in interactive mode and non-interactive mode, much like a Unix shell.
-It prints a prompt **(hbnb)** and waits for the user for input.
+Clone this repository: git clone "https://github.com/Dikachis/AirBnB_clone.git"
+Access AirBnb directory: cd AirBnB_clone
+Run hbnb(interactively): ./console and then press enter command
+Run hbnb(non-interactively): echo "<command>" | ./console.py
 
-Command | Example
-------- | -------
-Run the console | ```./console.py```
-Quit the console | ```(hbnb) quit```
-Display the help for a command | ```(hbnb) help <command>```
-Create an object (prints its id)| ```(hbnb) create <class>```
-Show an object | ```(hbnb) show <class> <id>``` or ```(hbnb) <class>.show(<id>)```
-Destroy an object | ```(hbnb) destroy <class> <id>``` or ```(hbnb) <class>.destroy(<id>)```
-Show all objects, or all instances of a class | ```(hbnb) all``` or ```(hbnb) all <class>```
-Update an attribute of an object | ```(hbnb) update <class> <id> <attribute name> "<attribute value>"``` or ```(hbnb) <class>.update(<id>, <attribute name>, "<attribute value>")```
-
-
-### Interactive mode (example)
-
-```bash
-$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb)
-(hbnb)
-(hbnb) quit
-$
-```
-
-### Non-interactive mode (example)
-
-```bash
-$ echo "help" | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
-$ cat test_help
-help
-$
-$ cat test_help | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-
-EOF  help  quit
-(hbnb)
-$
-$ cat test_help
-help
-$
-$ cat test_help | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb)
-$
-```
-
-## Testing :straight_ruler:
-
-Unittests for the HolbertonBnB project are defined in the [tests](./tests)
-folder. To run the entire test suite simultaneously, execute the following command:
-
-```
-$ python3 unittest -m discover tests
-```
-
-Alternatively, you can specify a single test file to run at a time:
-
-```
-$ python3 unittest -m tests/test_console.py
-```
-
-
-## Authors :black_nib:
-
-* **Sandile Mazibuko**
-* **Bathobile Precious Pearl Nkosi**
+Authors
+========
+Sandile mazibuko
+Bathobile Nkosi
